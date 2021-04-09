@@ -19,7 +19,7 @@ public class LogService {
                 System.out.println("\n\nEncontrei " + records.count() + " registros");
                 for(var record : records){
                     System.out.println("-----------------------------------------------");
-                    System.out.println("LOG " + record.topic());
+                    System.out.println("LOG: " + record.topic());
                     System.out.println("Key: " + record.key());
                     System.out.println("Value: " + record.value());
                     System.out.println("Partition: " + record.partition());
