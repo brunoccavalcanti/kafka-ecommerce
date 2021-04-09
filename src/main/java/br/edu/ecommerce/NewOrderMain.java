@@ -14,7 +14,7 @@ import java.util.concurrent.ExecutionException;
 public class NewOrderMain {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         var producer = new KafkaProducer<String, String>(properties());
-        for(int i = 0; i < 50; i++) {
+        for(int i = 0; i < 100; i++) {
             var key = UUID.randomUUID().toString();
             var value = key + ",3252,152";
             var record = new ProducerRecord<>("ECOMMERCE_NEW_ORDER", value, value);
